@@ -1,0 +1,157 @@
+{% extends 'AppWeb/Inicio.html' %}
+
+{% load static %}
+
+    {% block content %}
+
+<script src="{% static 'AppWeb/js/jquery.magnific-popup.js' %}" type="text/javascript"></script>
+	<link href="{% static 'AppWeb/css/magnific-popup.css' %}" rel="stylesheet" type="text/css">
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+		});
+		</script>
+
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+                                <li><a href="{% url 'Inicio' %}">Inicio</a></li>
+						    	<li><a href="{% url 'Tienda' %}">Tienda</a></li>
+						    	<li class="current"><a href="{% url 'Servicios' %}">Programas de Trabajo y Servicios</a></li>
+								<li><a href="{% url 'Contactanos' %}">Contactanos</a></li>							
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="{% static 'AppWeb/js/responsive-nav.js' %}"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+						  <div class="clear"></div>
+						</ul>
+					 </li>
+				   </ul>
+		        <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	  </div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row team_box">
+				<h3 class="m_2">Programas de trabajo</h3>
+				<div class="col-md-3 team1">
+				  <a class="popup-with-zoom-anim" href="#small-dialog1"><img src="{% static 'AppWeb/images/kids.jpg' %}" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog1" class="mfp-hide">
+					   <div class="pop_up1">
+					   	 <h2>KIDS (3 - 7 AÑOS)</h2>
+						 <p>En esta etapa el desarrollo motriz es fundamental, la madurez de los movimiento motrices básicos como el caminar, reptar, lanzar, atrapar, equilibrarse, cambiar de posiciones sin perder el equilibrio son la base fundamental para el desarrollo físico y Psicológico en armonía, desarrollamos un programa pedagógico que permita mejorar sus habilidades motrices básicas y fomentar un repertorio de habilidades técnicas marciales y deportivas en un contexto sano, armónico y lúdico.</p>
+					   </div>
+					</div>
+					<h4 class="m_5"><a>KIDS (3 - 7 AÑOS)</a></h4>
+				</div>
+				<div class="col-md-3 team1">
+					<a class="popup-with-zoom-anim" href="#small-dialog2"><img src="{% static 'AppWeb/images/infantil.jpg' %}" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog2" class="mfp-hide">
+					   <div class="pop_up2">
+					   	 <h2>INFANTILES</h2>
+						 <p>En esta etapa en donde nuestros niños ya han adquirido una maduración de nuestro programa KIDS. Sus habilidades físicas, cuentan con una base más sólida en la práctica del taekwondo de iniciación, sin embargo para aquellos niños que se incorporan a nuestro programa de trabajo en esta etapa, se implementa y desarrolla un trabajo pedagógico que integre estos dos propósitos para finalizar una consolidación técnica marcial y deportiva, sin descuidar la parte lúdica que todavía se consolida con más aceptación y disfrute en esta etapa de la vida.</p>
+					   </div>
+					</div>
+					<h4 class="m_5"><a>INFANTILES</a></h4>
+				</div>
+				<div class="col-md-3 team1">
+					<a class="popup-with-zoom-anim" href="#small-dialog3"><img src="{% static 'AppWeb/images/juvenil.jpg' %}" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog3" class="mfp-hide">
+					   <div class="pop_up3">
+					   	 <h2>JUVENILES</h2>
+						 <p>En una tercera etapa de desarrollo de los niños hacia la adolescencia, los jóvenes siempre buscan Modelos ejemplares de conducta a seguir, desarrollamos la mejor propuesta en esta etapa, nos dimos a la tarea de mantener un programa actualizado que contemple todos los elementos necesarios en retos de competencia sana, en donde el alumno enfoque sus propósitos de mejorar su autoestima, su autoconcepto, la aceptación de sus habilidades y destrezas para fortalecer su personalidad  dentro de las esferas marciales y deportivas.  Es en esta etapa donde la especialidad deportiva va llevando una sólida preparación que busca dirigirse hacia los nuevos hábitos de una buena salud física y dentro del deporte un camino al alto rendimiento. Es por ello que nosotros nos preocupamos por desarrollo armónico en los niños y jóvenes que pretenden iniciar su trabajo competitivo de forma segura, con especialistas deportivos.</p>
+					   </div>
+					</div>
+					<h4 class="m_5"><a>JUVENILES</a></h4>
+				</div>
+				<div class="col-md-3 team1">
+					<a class="popup-with-zoom-anim" href="#small-dialog4"><img src="{% static 'AppWeb/images/adulto.jpg' %}" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog4" class="mfp-hide">
+					   <div class="pop_up4">
+					   	 <h2>ADULTOS</h2>
+						 <p>Cuando una persona adulta cree que no puede practicar el taekwondo a esta edad, es porque  desconoce las ventajas que podemos ofrecer para el cuidado de su salud física y mental. A través de nuestros ejercicios técnicos llevamos el mejoramiento de sus habilidades físicas, logrando un equilibrio entre su mente y su desempeño en el día a día, también ofrecemos un desarrollo técnico Marcial para seguir desarrollando su avance técnico en grados superiores de cinta negra, mejorando el desarrollo de su taekwondo ofreciendo un bienestar a su salud y su familia.</p>
+					   </div>
+					</div>
+					<h4 class="m_5"><a>ADULTOS</a></h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 team_bottom">
+				  <ul class="team_list">
+					<h4>Servicios</h4>
+		            <li><a>Clases en línea.</a></li>
+		            <li><a>Clases presenciales.</a></li>
+		            <li><a>Asesorías en diseño de proyectos de trabajo institucionales.</a></li>
+		            <li><a>Asesorías en diseño de programas de entrenamiento personal y de grupo.</a></li>
+		          	<li><a>Convenios institucionales de trabajo en el sector privado y público para la promoción y difusión del Taekwondo.</a></li>
+				  </ul>
+				</div>
+				<div class="col-md-8">
+					<ul class="team_list">
+					 <p class="m_7">En el Club Deportivo de Taekwondo, contamos con diferentes programas de trabajo especializados para cada etapa y edad dentro del proceso de aprendizaje: Kids, Infantiles, Juveniles, Adultos.</p>
+		             <img src="{% static 'AppWeb/images/tae.jpg' %}" class="img-responsive" alt=""/>
+		          </ul>
+				</div>
+			</div>
+		</div>
+	   </div>
+	  </div>
+	  <div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<div class="row footer_bottom">
+				               <div class="copy">
+			                   <p>© 2021 Hecho por: <a href="http://cecytem.edomex.gob.mx/chimalhuacan_ii" target="_blank">Cecytem Chimalhuacán II</a></p>
+		                    </div>
+   				          </div>
+						</ul>
+					</div>
+                    <div class="col-md-3">
+						<ul class="footer_box">
+							<li><a></a></li>
+						</ul>
+					</div>
+                    <div class="col-md-3">
+						<ul class="footer_box">
+							<li><a></a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<ul class="social">	
+							  <li class="facebook"><a href="https://es-la.facebook.com/CecytemPlantelChimalhuacan2/"><span> </span></a></li>
+							  <li class="twitter"><a href="https://twitter.com/cechimal2"><span> </span></a></li>
+						    </ul>
+		   				</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>	
+
+{% endblock %}
